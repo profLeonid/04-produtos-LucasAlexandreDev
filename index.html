@@ -11,9 +11,22 @@
     
     <h1 class="text 2xl">Lista de Produtos</h1>
 
-    <input type="text" class="border px-4 py-2 rouded">
-    <button class="bg-blue-500 text-white rounded px-4 py-2 hover:bg-blue-600">Adicionar</button>
+    <input 
+        type="text" 
+        class="border px-4 py-2 rounded-sm"
+        id="produto"
+    >
 
-    <div></div>
+    <button 
+        class="bg-blue-500 text-white rounded px-4 py-2 hover:bg-blue-600 border border-black p-4"
+        onclick="adicionarProduto()"
+        >
+
+        Adicionar    
+    </button>
+
+    <div id="lista" class="flex flex-col gap-2"> </div>
+ 
+<script src="./main.js"></script>    
 </body>
 </html>
