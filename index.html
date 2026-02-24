@@ -14,18 +14,32 @@
     <input 
         type="text" 
         class="border px-4 py-2 rounded-sm"
+        id="codigo-produto"
+        placeholder="Código"
+    > 
+    
+    <input 
+        type="text" 
+        class="border px-4 py-2 rounded-sm"
         id="produto"
+        placeholder="Produto"
+    >
+
+    <input 
+    type="text" 
+    class="border px-4 py-2 rounded-sm"
+    id="quantidade-produto"
+    placeholder="Quantidade"
     >
 
     <button 
         class="bg-blue-500 text-white rounded px-4 py-2 hover:bg-blue-600 border border-black p-4"
-        onclick="adicionarProduto()"
-        >
+        onclick="adicionarProduto(), adicionarCodigo(), adicionarQuantidadeProduto()">
 
         Adicionar    
     </button>
 
-    <div id="lista" class="flex flex-col gap-2"> </div>
+    <div id="lista" class="flex gap-2"> </div>
  
 <script src="./main.js"></script>    
 </body>
