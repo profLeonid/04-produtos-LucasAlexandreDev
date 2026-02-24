@@ -8,8 +8,25 @@ function adicionarProduto(){
 
     const span = document.createElement('span')
     span.textContent = produto.value
-    span.className = 'bg-blue-400 px-8 py-2 rounded-[5px]'
 
-    lista.appendChild(span)
+    let nomeProduto = validarVazio(produto.value)
 
+    if(nomeProduto){
+        span.className = 'bg-blue-400 px-8 py-2 rounded-[5px]'
+        lista.appendChild(span)
+        limparCampo()
+    }else{
+        return false
+    }
+
+}
+
+function validarVazio(produto){
+    let nomeProduto = String(produto)
+
+    if(nomeProduto == ''){
+        return false
+    }else{
+        return nomeProduto
+    }
 }
