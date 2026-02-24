@@ -30,3 +30,9 @@ function validarVazio(produto){
         return nomeProduto
     }
 }
+
+function limparCampo(){
+    document.getElementById('produto').value = ''
+}
+
+
