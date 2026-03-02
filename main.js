@@ -7,7 +7,7 @@ import { erros } from './modulo/mensagemErro.js'
 function validarCadastroProduto(codigo, produto, quantidade){
     const erroVazio = validarVazio(codigo, produto, quantidade)
    
-    if(!erroVazio){
+    if(erroVazio != true){
         alert(erros('camposObrigatorios'))
         
         return false
@@ -15,14 +15,14 @@ function validarCadastroProduto(codigo, produto, quantidade){
 
     const erroEntrada = validarDadosDeEntrada(codigo, produto, quantidade)
     
-    if(!erroEntrada){
+    if(erroEntrada != true){
         alert(erros(erroEntrada))
         
         return false
     }
 
     const erroQuantidade = validarDadoQuantidade(quantidade)
-    if(!erroQuantidade){
+    if(erroQuantidade != true){
         alert(erros(erroQuantidade))
         
         return false

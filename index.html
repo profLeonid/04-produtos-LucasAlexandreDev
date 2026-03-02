@@ -7,40 +7,49 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 </head>
-<body class="bg-gray-200 flex flex-col items-center justify-center h-screen gap-4">
+<body class="bg-indigo-500 min-h-screen flex items-center justify-center p-4">
     
-    <h1 class="text 2xl">Lista de Produtos</h1>
+    <main class="bg-white w-full max-w-md p-8 rounded-2xl shadow-lg shadow-black flex flex-col gap-6">        
+        <div class="text-center">
+            <h1 class="text-2xl font-bold text-gray-800">Lista de Produtos</h1>
+            <p class="text-gray-500 text-sm">Gerencie seu estoque rapidamente</p>
+        </div>
 
-    <input 
-        type="text" 
-        class="border px-4 py-2 rounded-sm"
-        id="codigo-produto"
-        placeholder="Código"
-    > 
-    
-    <input 
-        type="text" 
-        class="border px-4 py-2 rounded-sm"
-        id="produto"
-        placeholder="Produto"
-    >
+        <div class="flex flex-col gap-4 ">
+            <input 
+                type="text" 
+                class="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+                id="codigo-produto"
+                placeholder="Código do Produto"
+            > 
+            
+            <input 
+                type="text" 
+                class="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+                id="produto"
+                placeholder="Nome do Produto"
+            >
 
-    <input 
-    type="text" 
-    class="border px-4 py-2 rounded-sm"
-    id="quantidade-produto"
-    placeholder="Quantidade"
-    >
+            <input 
+                type="number" 
+                class="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+                id="quantidade-produto"
+                placeholder="Quantidade"
+            >
 
-    <button 
-        class="bg-blue-500 text-white rounded px-4 py-2 hover:bg-blue-600 border border-black p-4"
-        onclick="adicionarProduto(), adicionarCodigo(), adicionarQuantidadeProduto()">
+            <button 
+                class="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 shadow-md active:scale-95 transition-all cursor-pointer"
+                id="botao-adicionar">
+                Adicionar Produto
+            </button>
+        </div>
 
-        Adicionar    
-    </button>
+        <hr class="border-gray-100">
 
-    <div id="lista" class="flex gap-2"> </div>
- 
-<script src="./main.js"></script>    
+        <div id="lista" class="flex flex-col gap-3"></div>
+        
+    </main>
+
+<script type="module" src="./main.js"></script>
 </body>
 </html>
